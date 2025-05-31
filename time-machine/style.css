@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+  font-family: 'Arial', sans-serif;
+  cursor: crosshair;
+}
+
+/* 隐藏滚动条但保持功能 */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* 为画布添加平滑过渡效果 */
+canvas {
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+/* 鼠标悬停时的视觉反馈 */
+body:hover canvas {
+  filter: brightness(1.05);
+}
+
+/* 加载动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: fadeIn 1s ease-in;
+}
